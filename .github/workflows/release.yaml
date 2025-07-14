@@ -119,10 +119,10 @@ jobs:
           fetch-depth: 0
           ref: release-${{ inputs.release }}
 
-#      - name: Configure Git
-#        run: |
-#          git config user.name "$GITHUB_ACTOR"
-#          git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
+      - name: Configure Git
+        run: |
+         git config user.name "$GITHUB_ACTOR"
+         git config user.email "$GITHUB_ACTOR@users.noreply.github.com"
 
       - name: Run chart-releaser
         uses: netcracker/chart-releaser-action@main
